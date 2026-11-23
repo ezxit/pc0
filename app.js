@@ -26,7 +26,7 @@
   function updateNotes() {
     const note = notes.find(item => item.id === slides[current].id);
     $('notes-title').textContent = note?.title || slides[current].getAttribute('aria-label').split('：')[1];
-    $('notes-timing').textContent = `建議 ${durations[current]} 秒　｜　${format(cumulative[current])} 至 ${format(cumulative[current] + durations[current])}`;
+    $('notes-timing').textContent = `${note?.speaker ? note.speaker + '　｜　' : ''}建議 ${durations[current]} 秒\n全組進度 ${format(cumulative[current])} 至 ${format(cumulative[current] + durations[current])}`;
     $('notes-script').textContent = note?.script || '正在載入講稿……';
     $('speaker-notes').scrollTop = 0;
   }
@@ -88,5 +88,5 @@
     else $('fullscreen').focus({preventScroll:true});
   });
   show(current);
-  fetch('assets/notes.json').then(response => {if(!response.ok) throw new Error(); return response.json();}).then(data => {notes = data; updateNotes();}).catch(() => {$('notes-script').textContent = '講稿未能載入，請使用下方連結下載完整講稿。';});
+  fetch('assets/notes.json?v=3').then(response => {if(!response.ok) throw new Error(); return response.json();}).then(data => {notes = data; updateNotes();}).catch(() => {$('notes-script').textContent = '講稿未能載入，請使用下方連結下載完整講稿。';});
 })();
