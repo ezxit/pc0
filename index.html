@@ -10,13 +10,13 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/claudefont.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#presentation">跳至簡報</a>
   <header class="topbar">
-    <a class="brand" href="#cover" aria-label="回到封面"><span class="brand-seal" aria-hidden="true">論</span><span>中文科<span class="brand-divider">／</span>經典選讀</span></a>
+    <a class="brand" href="#cover" aria-label="回到封面"><span class="brand-seal" aria-hidden="true">論</span><span>中文科</span></a>
     <nav class="chapter-nav" aria-label="簡報五個部分">
       <button data-goto="read-12"><span class="latin">01</span> 朗讀</button>
       <button data-goto="translate-12"><span class="latin">02</span> 翻譯</button>
@@ -35,7 +35,6 @@
           <h1>論<span class="red">仁</span><br>論君子</h1>
           <p class="cover-subtitle">一個人，如何守住內心的準則？</p>
           <p class="cover-scope">課文前三則<span>・</span>朗讀、翻譯與生活思考</p>
-          <div class="cover-time"><span class="latin">3′30″</span><span>從經典，讀懂今天的自己</span></div>
         </div>
         <figure class="portrait"><img src="assets/images/confucius.webp" width="1854" height="1920" alt="曲阜孔府的孔子畫像，孔子身穿長袍，雙手交疊於胸前"><figcaption>孔子像<span>曲阜孔府藏像</span></figcaption></figure>
         <div class="cover-stamp" aria-hidden="true">仁者<br>安仁</div>
@@ -58,7 +57,7 @@
       </section>
 
       <section class="slide" id="translate-12" data-part="2" data-seconds="23" aria-label="第 4 頁：翻譯第一、二則" hidden>
-        <div class="section-heading"><p class="eyebrow">二・翻譯<span class="heading-note">第一、二則</span></p><h2>仁，讓人安定而公正。</h2></div>
+        <div class="section-heading"><p class="eyebrow">二・翻譯<span class="heading-note">第一、二則</span></p><h2>第一、二則譯文</h2></div>
         <div class="translation-grid">
           <article><span class="large-number latin">01</span><h3>面對順逆，守住本心</h3><p>沒有仁德的人，不能長久安處窮困，<br class="desktop-break">也不能長久安享快樂。</p><p>有仁德的人，實踐仁德而心安；<br class="desktop-break">有智慧的人，明白仁德的益處而行仁。</p></article>
           <article><span class="large-number latin">02</span><h3>喜愛與厭惡，都有原則</h3><p>只有有仁德的人，<br>才能公正地喜愛人、厭惡人。</p><p class="gloss"><b>約</b>：窮困　<b>知</b>：通「智」<br><b>好／惡</b>：喜愛／厭惡</p></article>
@@ -123,7 +122,6 @@
 
   <footer class="controls">
     <div class="page-controls"><button id="previous" class="icon-button" aria-label="上一頁"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><span class="page-count latin" id="page-count">01 / 09</span><button id="next" class="icon-button" aria-label="下一頁"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button><div class="page-dots" aria-label="選擇投影片"></div></div>
-    <div class="timer-controls"><button id="timer-button" class="timer-button" aria-label="開始三分半計時" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M9 2h6m-3 4v7l3 2"/></svg><span id="timer-value" class="latin">03:30</span><span id="timer-label">開始計時</span></button><button id="reset-timer" class="quiet-button small" aria-label="重設三分半計時">重設</button><label class="auto-label"><input type="checkbox" id="auto-advance">自動翻頁</label></div>
     <div class="tool-controls"><button id="notes-button" class="quiet-button" aria-pressed="false" aria-controls="speaker-notes">講者稿</button><button id="fullscreen" class="icon-button" aria-label="全螢幕"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
   </footer>
   <div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>
@@ -132,7 +130,7 @@
 
   <aside id="speaker-notes" hidden aria-label="講者稿">
     <div class="notes-header"><div><p class="eyebrow">講者備註</p><h2 id="notes-title">封面</h2></div><button id="close-notes" class="icon-button" aria-label="關閉講者稿"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
-    <p class="notes-timing" id="notes-timing"></p><div id="notes-script"></div><a href="%E8%AC%9B%E7%A8%BF.md" download>下載完整三分半講稿</a><p class="notes-tip">建議時長合共 <span class="latin">210</span> 秒，實際時間依語速而定。<br>快捷鍵：← → 翻頁；<span class="latin">N</span> 講者稿；<span class="latin">F</span> 全螢幕；空白鍵暫停或繼續計時。</p>
+    <p class="notes-timing" id="notes-timing"></p><div id="notes-script"></div><a href="%E8%AC%9B%E7%A8%BF.md" download>下載完整三分半講稿</a><p class="notes-tip">建議時長合共 <span class="latin">210</span> 秒，實際時間依語速而定。<br>快捷鍵：← → 翻頁；<span class="latin">N</span> 講者稿；<span class="latin">F</span> 切換全螢幕；<span class="latin">Esc</span> 退出全螢幕。</p>
   </aside>
 
   <dialog id="sources-dialog" aria-labelledby="sources-title">
@@ -144,6 +142,6 @@
     <ul><li><a href="https://commons.wikimedia.org/wiki/File:Cropped_version_of_Confucius_Portrait,_Kongzi_(Confucius)_Family_Mansion,_Qufu_(13044335945).jpg" target="_blank" rel="noopener">孔子像，曲阜孔府藏像</a>。原畫作者不詳；原始攝影 <span class="latin">Gary Todd</span>，公有領域／<span class="latin">CC0</span>。封面採裁切。</li><li><a href="https://commons.wikimedia.org/wiki/File:Tang_Yin_-_Ink_Bamboo_-_1989.363.54_-_Metropolitan_Museum_of_Art.jpg" target="_blank" rel="noopener">唐寅《墨竹》</a>，大都會藝術博物館藏，館藏編號 <span class="latin">1989.363.54</span>，公有領域。總結頁採局部。</li></ul>
     <h3>字體與製作</h3><p>中文優先使用本機宋體；未安裝時載入開源思源宋體繁體子集。英文、數字及粵拼使用你提供的 <span class="latin">claudefont.ttf</span>。網站圖示使用你提供的標誌。</p><p class="sources-bottom">資料核對：<span class="latin">2026.11.23</span>　｜　共九頁，建議講述三分半鐘</p>
   </dialog>
-  <noscript><p class="noscript">請啟用瀏覽器的 JavaScript，以使用翻頁和計時功能。</p></noscript>
+  <noscript><p class="noscript">請啟用瀏覽器的 JavaScript，以使用翻頁功能。</p></noscript>
 </body>
 </html>
